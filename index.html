@@ -18,9 +18,7 @@
         }
 
         .thumbnail{
-            width: 400px;
-            display: block;
-            object-fit: contain;
+            width: 100%;
         }
 
         .SearchBar{
@@ -33,24 +31,12 @@
           margin-bottom:12px;
         }
 
-        .video-preview{
-            width: 400px;
-            display: inline-block;
-            vertical-align: top;
-            margin-right: 20px;
-        }
-
         .channel-picture{
-            display: inline-block;
-            width: 50px;
-            margin-right: 10px;
-            vertical-align: top;
+            width: 50px;  
         }
 
         .video-info{
-            display: inline-block;
-            width: 330px;
-            
+            width: 340px;
         }
 
         .profile-picture{
@@ -71,58 +57,116 @@
         }
 
         .profile-picture{
-            border-radius: 50px;
+            width: 40px;
+            border-radius: 40px;
         }
         
+        .video-info-grid{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 16px;
+            row-gap: 40px;
+        }
     </style>
 </head>
 <body>
     <input class="SearchBar" type="text" placeholder="Search">
 
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="">
-        </div>
-        <div>
-            <div class="channel-picture">
-                <img class="profile-picture" src="picture-channel/profile1.jpg" alt="">
+    <div class="video-grid">
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="">
             </div>
-            <div class="video-info">
-                <p class="video-title">K Garu (Acoustic) - @JohnChamlingTV #johnandthelocals</p>
-                <p class="video-author">Hashtag Dang</p>
-                <p class="video-stats">592K views &middot; 1 month ago</p>
-            </div>    
-        </div>
-    </div>
-   
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="">
-        </div>
-        <div>
-            <div class="channel-picture">
-                <img class="profile-picture" src="picture-channel/profile2.jpg" alt="">
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile1.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">K Garu (Acoustic) - @JohnChamlingTV #johnandthelocals</p>
+                    <p class="video-author">Hashtag Dang</p>
+                    <p class="video-stats">592K views &middot; 1 month ago</p>
+                </div>
             </div>
-            <div class="video-info">
-                <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
-                <p class="video-author">Bipul Chettri                </p>
-                <p class="video-stats">2M views &middot; 3 years ago</p>
-            </div>    
         </div>
-    </div>
-    <div class="video-preview">
-        <div class="thumbnail-row">
-            <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="">
-        </div>
-        <div>
-            <div class="channel-picture">
-                <img class="profile-picture" src="picture-channel/profile3.jpg" alt="">
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="">
             </div>
-            <div class="video-info">
-                <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
-                <p class="video-author">Purna Rai</p>
-                <p class="video-stats">15M views &middot; 2 months ago</p>
-            </div>    
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile2.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
+                    <p class="video-author">Bipul Chettri                </p>
+                    <p class="video-stats">2M views &middot; 3 years ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile3.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
+                    <p class="video-author">Purna Rai</p>
+                    <p class="video-stats">15M views &middot; 2 months ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-4.webp" alt="">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile4.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">ST MAN FT. LIL JHOLA, YUNG 22 & LIL NORZZA - INDIA | OFFICIAL MUSIC VIDEO | 2024</p>
+                    <p class="video-author">ST MAN OFFICIAL</p>
+                    <p class="video-stats">11M views &middot; 3 months ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile5.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Timro Jeet Mero Haar - The Edge Band (Acoustic version 2020)</p>
+                    <p class="video-author">TheEdgeBandNepal</p>
+                    <p class="video-stats">368K views &middot; 4 years ago</p>
+                </div>
+            </div>
+        </div>
+        <div class="video-preview">
+            <div class="thumbnail-row">
+                <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="">
+            </div>
+            <div class="video-info-grid">
+                <div class="channel-picture">
+                    <img class="profile-picture" src="picture-channel/profile6.jpg" alt="">
+                </div>
+                <div class="video-info">
+                    <p class="video-title">Sajjan Raj Vaidya - Dhairya [Official Release]</p>
+                    <p class="video-author">Sajjan</p>
+                    <p class="video-stats">43M views &middot; 1 Years ago</p>
+                </div>
+            </div>
         </div>
     </div>
 
