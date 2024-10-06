@@ -4,171 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube Clone</title>
-
+    <link rel="stylesheet" href="css/video.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/sidebar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
 
-
-    <style>
-        p{
-            font-family: Roboto, arial;
-            margin-top: 0;
-            margin-bottom: 0;
-        }
-
-        .thumbnail{
-            width: 100%;
-        }
-
-        .SearchBar{
-          display: block;
-        }
-
-        .video-title{
-          margin-top: 0;
-          font-weight: 500;
-          margin-bottom:12px;
-        }
-
-        .channel-picture{
-            width: 50px;  
-        }
-
-        .video-info{
-            width: 340px;
-        }
-
-        .profile-picture{
-            width: 100%;
-        }
-
-        .thumbnail-row{
-            margin-bottom: 12px;
-        }
-        
-        .video-author, .video-stats{
-            font-size: 14px;
-            color: rgb(96,96,96);
-        }
-
-        .video-author{
-            margin-bottom: 4px;
-        }
-
-        .profile-picture{
-            width: 40px;
-            border-radius: 40px;
-        }
-        
-        .video-info-grid{
-            display: grid;
-            grid-template-columns: 50px 1fr;
-        }
-
-        .video-grid{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            column-gap: 16px;
-            row-gap: 40px;
-        }
-    </style>
 </head>
 <body>
-    <input class="SearchBar" type="text" placeholder="Search">
+    <header class="header">
+        <div class="left-section">
+            <img class="hamburgerIcon" src="icon/hamburgerIcon.svg" alt="">
+            <img class="youtubeLogo" src="icon/youtube.svg" alt="">
+        </div>
+        <div class="middle-section">
+            <input class="SearchBar" type="text" placeholder="Search">
+            <button class="search-button">
+                <img class="search-icon" src="icon/search.svg" alt="">
+                <div class="tooltip">Search</div>
+            </button>
+            <button class="voice-search-button">
+                <img class="voice-search-icon" src="icon/voice.svg" alt="">
+                <div class="tooltip">Search with your voice</div>
+            </button>
+        </div>
+        <div class="right-section">
+            <div class="upload-icon-container">
+                <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg"viewBox="0 0 24 24"  focusable="false" aria-hidden="true"><path d="M14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2zm3-7H3v12h14v-6.39l4 1.83V8.56l-4 1.83V6m1-1v3.83L22 7v8l-4-1.83V19H2V5h16z"></path></svg>
+                <div class="tooltip">Create</div>
+            </div>
+            <div class="notifications-icon-container">
+                <img class="notifications-icon" src="icon/bell-notification.svg" alt="">
+                <div class="notifications-count">3</div>
+                <div class="tooltip">Notifications</div>
+            </div>  
+            <img class="current-user-picture" src="icon/profileIcon.jpg" alt="">
+        </div>
+    </header>
 
-    <div class="video-grid">
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile1.jpg" alt="">
+    <nav class="sidebar">
+        <div class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"  viewBox="0 0 24 24" focusable="false" aria-hidden="true"><g><path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path></g></svg>
+            <div>Home</div>
+        </div>       
+        <div class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z"></path></svg>
+            <div>Shorts</div>
+        </div>       
+        <div class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"  viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z"></path></svg>
+            <div>Subscriptions</div>
+        </div>       
+        <div class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"  viewBox="0 0 24 24"  focusable="false" aria-hidden="true"><path d="m11 7 6 3.5-6 3.5V7zm7 13H4V6H3v15h15v-1zm3-2H6V3h15v15zM7 17h13V4H7v13z"></path></svg>
+            <div>You</div>
+        </div>       
+    </nav>
+
+    <main>
+        <section class="video-grid">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="">
+                    <div class="video-time">2:53</div>
                 </div>
-                <div class="video-info">
-                    <p class="video-title">K Garu (Acoustic) - @JohnChamlingTV #johnandthelocals</p>
-                    <p class="video-author">Hashtag Dang</p>
-                    <p class="video-stats">592K views &middot; 1 month ago</p>
-                </div>
-            </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile2.jpg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
-                    <p class="video-author">Bipul Chettri                </p>
-                    <p class="video-stats">2M views &middot; 3 years ago</p>
-                </div>
-            </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile3.jpg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
-                    <p class="video-author">Purna Rai</p>
-                    <p class="video-stats">15M views &middot; 2 months ago</p>
+        
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile1.jpg" alt="">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">K Garu (Acoustic) - @JohnChamlingTV #johnandthelocals</p>
+                        <p class="video-author">Hashtag Dang</p>
+                        <p class="video-stats">592K views &middot; 1 month ago</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-4.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile4.jpg" alt="">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-2.webp" alt="">
+                    <div class="video-time">5:19</div>
                 </div>
-                <div class="video-info">
-                    <p class="video-title">ST MAN FT. LIL JHOLA, YUNG 22 & LIL NORZZA - INDIA | OFFICIAL MUSIC VIDEO | 2024</p>
-                    <p class="video-author">ST MAN OFFICIAL</p>
-                    <p class="video-stats">11M views &middot; 3 months ago</p>
-                </div>
-            </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile5.jpg" alt="">
-                </div>
-                <div class="video-info">
-                    <p class="video-title">Timro Jeet Mero Haar - The Edge Band (Acoustic version 2020)</p>
-                    <p class="video-author">TheEdgeBandNepal</p>
-                    <p class="video-stats">368K views &middot; 4 years ago</p>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile2.jpg" alt="">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Bipul Chettri - Katai Uslai (Official Music Video)</p>
+                        <p class="video-author">Bipul Chettri                </p>
+                        <p class="video-stats">2M views &middot; 3 years ago</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="video-preview">
-            <div class="thumbnail-row">
-                <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="">
-            </div>
-            <div class="video-info-grid">
-                <div class="channel-picture">
-                    <img class="profile-picture" src="picture-channel/profile6.jpg" alt="">
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-3.webp" alt="">
+                    <div class="video-time">7:43</div>
                 </div>
-                <div class="video-info">
-                    <p class="video-title">Sajjan Raj Vaidya - Dhairya [Official Release]</p>
-                    <p class="video-author">Sajjan</p>
-                    <p class="video-stats">43M views &middot; 1 Years ago</p>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile3.jpg" alt="">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Purna Rai & Dajubhaiharu - Sparsha Sangeet</p>
+                        <p class="video-author">Purna Rai</p>
+                        <p class="video-stats">15M views &middot; 2 months ago</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-4.webp" alt="">
+                    <div class="video-time">5:19</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile4.jpg" alt="">
+        
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">ST MAN FT. LIL JHOLA, YUNG 22 & LIL NORZZA - INDIA | OFFICIAL MUSIC VIDEO | 2024</p>
+                        <p class="video-author">ST MAN OFFICIAL</p>
+                        <p class="video-stats">11M views &middot; 3 months ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-5.webp" alt="">
+                    <div class="video-time">4:31</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile5.jpg" alt="">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Timro Jeet Mero Haar - The Edge Band (Acoustic version 2020)</p>
+                        <p class="video-author">TheEdgeBandNepal</p>
+                        <p class="video-stats">368K views &middot; 4 years ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="video-preview">
+                <div class="thumbnail-row">
+                    <img class="thumbnail" src="thumbnails/thumbnail-6.webp" alt="">
+                    <div class="video-time">6:34</div>
+                </div>
+                <div class="video-info-grid">
+                    <div class="channel-picture">
+                        <img class="profile-picture" src="picture-channel/profile6.jpg" alt="">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">Sajjan Raj Vaidya - Dhairya [Official Release]</p>
+                        <p class="video-author">Sajjan</p>
+                        <p class="video-stats">43M views &middot; 1 Years ago</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
